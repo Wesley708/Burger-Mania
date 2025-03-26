@@ -10,18 +10,27 @@ hamburguer.forEach(burguer => {
         div.className = 'receitas-box';
     };
     console.log(i);
-    i++;
+    
     
     
     div.innerHTML = `
+    
         <div>
-            <h2>${burguer.nome}</h2>
-            <p>${burguer.ingredientes}</p>    
+            <a href="/pages/receitas.html?id=${i}">
+                <h2>${burguer.nome}</h2>
+            </a>
+            <a href="/pages/receitas.html?id=${i}">
+                <p>${burguer.ingredientes}</p>
+            </a>
         </div>
         <div>
+            <a href="/pages/receitas.html?id=${i}">
             <img class="hamburguer-img" src="${burguer.imagem}" alt="Imagem do ${burguer.nome}">
-        </div>`;
+            </a>
+        </div>
+    `;
     cardapioDiv.appendChild(div);
+    i++;
 });
 
 console.log(hamburguer[0].nome);

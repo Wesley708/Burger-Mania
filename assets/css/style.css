@@ -8,14 +8,26 @@
 /* body{
     overflow: hidden;
 } */
-nav{
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Três colunas iguais */
+    align-items: center;
+    justify-items: center;
     width: 100%;
     background-color: rgb(158, 138, 138);
     height: 80px;
-    display: flex;
-    flex-direction: row;
+}
+
+nav div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
+}
+.back{
+    width: 50px;
+    height: 50px;
+    margin: 20px;
 }
 #text-logo{
     width: 25px;
@@ -32,7 +44,7 @@ h1{
 }
 .chamada{
     width: 100%;
-    height: 700px;
+    height: 400px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -46,11 +58,28 @@ h1{
     align-items: center;
     justify-content: left;
 }
-
+ 
+.overlay-receita{
+    width: 100%;
+    height: 100%;
+    background-color: #000000af;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: poppins;
+    font-size: 30px;
+    color: whitesmoke;
+    
+}
+.overlay-receita h2{
+    color: white;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 .overlay h2{
     color: white;
-    font-family: poppins;
-    font-weight: 300;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
     font-size: 35px;
     margin: 40px;
 }
@@ -68,11 +97,16 @@ h1{
 }
 .receitas-box{
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     font-family: poppins;
     height: 500px;
-    
+
+}
+.receitas-box a{
+    text-decoration: none;
+    color: black;
     
 }
 .receitas-box img{
@@ -88,7 +122,15 @@ h1{
     margin: 40px;
     max-width: 500px;
 }
-
+.receitas-box h2{
+    font-weight: 900;
+    font-size: 35px;
+    margin: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.receitas-box p{
+    text-indent: 25px;
+}
 .inverter{
     display: flex;
     flex-direction: row-reverse;
@@ -101,7 +143,7 @@ footer{
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 200px;
+    height: 130px;
     background-color: rgb(136, 123, 123);
 }
 
@@ -130,4 +172,10 @@ flex-direction: column;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+pre{
+    font-family: poppins; 
+    line-height: 1.5;
+    padding: 50px;
 }
